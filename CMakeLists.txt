@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(numerical-computation1
     src/statistics.cpp
     src/ndarray.cpp
+    src/aggregation.cpp
 )
 
 target_include_directories(numerical-computation1
@@ -27,7 +28,10 @@ target_link_libraries(statistics_example
 add_executable(ndarray_example
     examples/ndarray_example.cpp
 )
-
+add_executable(aggregation_example
+     
+     examples/aggregation_example.cpp
+)
 target_link_libraries(ndarray_example
     numerical-computation1
 )
